@@ -1,4 +1,4 @@
-import 'dart:math';
+
 import 'package:nhc/NOTIFICATIONS/notifications.dart';
 import 'package:nhc/PLOTS/plot.dart';
 import 'package:nhc/PROFILE/profile_page.dart';
@@ -8,7 +8,6 @@ import 'package:nhc/PROPERTIES/propertyUnit.dart';
 import 'package:nhc/filters.dart';
 import 'package:nhc/form/applicationFormDetails.dart';
 import 'package:nhc/form/purchasing_process.dart';
-import 'package:nhc/searchOperations.dart';
 import 'package:nhc/Styles/source.dart';
 import 'package:provider/provider.dart';
 

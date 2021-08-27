@@ -1,14 +1,15 @@
+import 'package:nhc/Styles/app_icons.dart';
 import 'package:nhc/Styles/source.dart';
 import 'package:provider/provider.dart';
 
-class Bookmarks extends StatefulWidget {
-  const Bookmarks({Key? key}) : super(key: key);
+class BookmarkPage extends StatefulWidget {
+  const BookmarkPage({Key? key}) : super(key: key);
 
   @override
-  _BookmarksState createState() => _BookmarksState();
+  _BookmarkPageState createState() => _BookmarkPageState();
 }
 
-class _BookmarksState extends State<Bookmarks> {
+class _BookmarkPageState extends State<BookmarkPage> {
   @override
   Widget build(BuildContext context) {
     final list = context.watch<ShownListOfBookmarks>();
@@ -99,7 +100,7 @@ class _BookmarksState extends State<Bookmarks> {
                                 color: colors.white,
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(5))),
-                            child: Icon(EvaIcons.bookmark,
+                            child: Icon(AppIcons.bookmark,
                                 color: colors.brandColor1),
                           ),
                         )

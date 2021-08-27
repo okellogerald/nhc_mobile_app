@@ -1,5 +1,5 @@
-import 'package:nhc/ONBOARDING/log_in.dart';
 import 'package:nhc/Styles/source.dart';
+import 'package:nhc/pages/home_page.dart';
 
 class ForgotPassword extends StatelessWidget {
   const ForgotPassword({Key? key}) : super(key: key);
@@ -72,7 +72,7 @@ class ForgotPassword extends StatelessWidget {
         MaterialButton(
             onPressed: () {
               if (_formKey.currentState!.validate()) {
-                functions.navigateTo(context, page: FirstPageOnScreen());
+                functions.navigateTo(context, page: HomePage());
               }
             },
             minWidth: double.maxFinite,

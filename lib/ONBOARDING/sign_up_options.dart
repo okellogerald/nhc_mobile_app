@@ -1,6 +1,7 @@
-import 'package:nhc/ONBOARDING/log_in.dart';
+
 import 'package:nhc/ONBOARDING/verification.dart';
 import 'package:nhc/Styles/source.dart';
+import 'package:nhc/pages/home_page.dart';
 
 class SignUpOptions extends StatelessWidget {
   const SignUpOptions({Key? key}) : super(key: key);
@@ -253,7 +254,7 @@ class SignUpOptions extends StatelessWidget {
                   child: MaterialButton(
                       onPressed: () {
                         functions.navigateTo(context,
-                            page: FirstPageOnScreen());
+                            page: HomePage());
                       },
                       minWidth: double.maxFinite,
                       height: 45,

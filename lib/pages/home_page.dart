@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nhc/HOUSING_UNITS/housing_units.dart';
 import 'package:nhc/PLOTS/plots.dart';
 import 'package:nhc/PROJECTS/projects.dart';
-import 'package:nhc/HOMEPAGE/featured_properties.dart';
+import 'package:nhc/pages/featured_page.dart';
 import '../Styles/source.dart';
 
 class HomePage extends StatefulWidget {
@@ -156,13 +156,12 @@ class _HomePageState extends State<HomePage>
                 sharedWidget.text(title, size: 20, color: colors.textColor),
                 GestureDetector(
                   onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => FeaturedProperties(
-                              imagesList: _images,
-                              title: title,
-                              namesList: _names,
-                              locationsList: _locations,
-                            )));
+                    FeaturedPage.navigateTo(context,
+                      title: title,
+                      images: _images,
+                      locations: _locations,
+                      names: _names
+                     );
                   },
                   child: sharedWidget.customizedContainer(
                       containerColor: colors.inActiveColor,

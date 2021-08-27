@@ -1,9 +1,9 @@
-import 'package:nhc/BOOKMARKS/bookmarks.dart';
 import 'package:nhc/MENU/faqs.dart';
 import 'package:nhc/MENU/help_and_feedback.dart';
 import 'package:nhc/PROFILE/bills.dart';
 import 'package:nhc/PROFILE/settings.dart';
 import 'package:nhc/Styles/source.dart';
+import 'package:nhc/pages/bookmark_page.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -46,7 +46,7 @@ class _ProfilePageState extends State<ProfilePage> {
         case 0:
           Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => ChangeNotifierProvider.value(
-                  value: bookmarksList, child: Bookmarks())));
+                  value: bookmarksList, child: BookmarkPage())));
           break;
         case 1:
           break;
@@ -73,7 +73,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           children: [
                             Icon(icons[index], color: colors.brandColor1),
                             SizedBox(height: 20),
-                          sharedWidget.text(details[index],
+                            sharedWidget.text(details[index],
                                 family: 'medium-2', size: 16)
                           ],
                         ),
@@ -105,9 +105,7 @@ class _ProfilePageState extends State<ProfilePage> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-             sharedWidget.text('Sara James',
-                  color: colors.brandColor3),
-            
+              sharedWidget.text('Sara James', color: colors.brandColor3),
               sharedWidget.text('sarajames@gmail.com',
                   family: 'medium-2', color: colors.greyColor, size: 16)
             ],
@@ -130,7 +128,7 @@ class _ProfilePageState extends State<ProfilePage> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                 sharedWidget.text('Bills payments'),
+                  sharedWidget.text('Bills payments'),
                   sharedWidget.text('Amounts in Tanzania Shillings',
                       family: 'regular', size: 18, color: colors.greyColor)
                 ],
@@ -165,7 +163,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 onTap: () {
                   functions.navigateTo(context, page: BillsScreen());
                 },
-                child:  sharedWidget.text('View payments history',
+                child: sharedWidget.text('View payments history',
                     family: 'medium-2', size: 16, color: colors.brandColor1),
               )
             ],
@@ -222,7 +220,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         child: ListTile(
                           leading:
                               Icon(icons[index], color: colors.brandColor1),
-                          title:  sharedWidget.text(details[index],
+                          title: sharedWidget.text(details[index],
                               family: 'medium-2', size: 18),
                         ),
                       ))
@@ -248,7 +246,7 @@ class _ProfilePageState extends State<ProfilePage> {
             child: Container(
                 child: ListTile(
                     leading: Icon(icon, color: iconColor),
-                    title:  sharedWidget.text(title,
+                    title: sharedWidget.text(title,
                         color: textColor, family: 'medium-2', size: 18)))),
       ),
     );

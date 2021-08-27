@@ -1,9 +1,23 @@
 import 'package:nhc/Styles/source.dart';
 
-class FeaturedProperties extends StatelessWidget {
+class FeaturedPage extends StatelessWidget {
+  static void navigateTo(BuildContext context,
+      {required List<String> images,
+      required String title,
+      required List<String> names,
+      required List<String> locations}) {
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => FeaturedPage(
+              imagesList: images,
+              title: title,
+              namesList: names,
+              locationsList: locations,
+            )));
+  }
+
   final List<String> imagesList, locationsList, namesList;
   final String title;
-  const FeaturedProperties(
+  const FeaturedPage(
       {Key? key,
       required this.title,
       required this.imagesList,
